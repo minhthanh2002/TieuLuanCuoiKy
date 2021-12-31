@@ -16,7 +16,7 @@ class Main {
   }
 
   private static void hienthiMenu() {
-    System.out.println("\n=========\nChuong trinh Quan ly hang hoa trong kho cua sieu thi ĐANG MINH THANH\n=========");
+    System.out.println("\n=========\nChuong trinh Quan ly hang hoa trong kho cua sieu thi DANG MINH THANH\n=========");
     int luaChon = 0;
     do {
       System.out.println("\nVui long chon (1 --> 7):");
@@ -55,7 +55,7 @@ class Main {
           khoHang.inThongKe();
           break;
         case 7:
-          System.out.println("ε[-_•]з Cam on ban đa su dung chuong trinh! Tam biet! ε[-_•]з");
+          System.out.println("ε[-_•]з Cam on ban da su dung chuong trinh! Tam biet! ε[-_•]з");
           break;
         default:
           System.out.println("Chuc nang ban chon khong hop le!");
@@ -97,7 +97,7 @@ class Main {
           timTheoKhoangThoiGianNhapKho();
           break;
         case 6:
-          System.out.println("Đang quay ve menu chinh ...");
+          System.out.println("Dang quay ve menu chinh ...");
           break;
         default:
           System.out.println("Chuc nang ban chon khong hop le!");
@@ -189,7 +189,7 @@ class Main {
           khoHang.sapXepTheoLoaiVaGiaNhap(true);
           break;
         case 9:
-          System.out.println("Đang quay ve menu chinh ...");
+          System.out.println("Dang quay ve menu chinh ...");
           break;
         default:
           System.out.println("Chuc nang ban chon khong hop le!");
@@ -269,7 +269,7 @@ class Main {
   // Ham nhap hang hoa mau, ham nay tao soLuongCanNhap hang hoa ngau nhien loai, ma hang, ten hang, so luong cung nhu ngay nhap
   private static void nhapHangHoaMau(int soLuongCanNhap) {
     khoHang = new Kho();
-    System.out.println("--- Đang nhap hang hoa mau ...");
+    System.out.println("--- Dang nhap hang hoa mau ...");
     int giaNhoNhat = 100;// 100k
     int giaLonNhat = 5000;// 5 chai
     int soLuongNhoNhat = 1;
@@ -288,10 +288,10 @@ class Main {
       long randomEpochDay = ThreadLocalRandom.current().nextLong(ngayNhoNhat.toEpochDay(), ngayLonNhat.toEpochDay());
       HangHoa hangHoa = new HangHoa(loai, maHang, tenHang, giaNhap, soLuong, LocalDate.ofEpochDay(randomEpochDay));
       khoHang.themHangHoa(hangHoa);
-      System.out.print("- Đa them hang hoa thu " + (i + 1) + " vao kho hang (");
+      System.out.print("- Da them hang hoa thu " + (i + 1) + " vao kho hang (");
       hangHoa.inThongTin();
       System.out.print(")!\n");
     }
-    System.out.println("--- Đa nhap xong hang hoa mau!");
+    System.out.println("--- Da nhap xong hang hoa mau!");
   }
 }

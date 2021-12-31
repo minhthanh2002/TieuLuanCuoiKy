@@ -53,7 +53,7 @@ class Kho {
     }
     dsHangHoa.add(hangHoa);
     // Them thanh cong
-    System.out.print("Đa them hang hoa (");
+    System.out.print("Da them hang hoa (");
     hangHoa.inThongTin();
     System.out.print(") thanh cong!");
     return true;
@@ -67,7 +67,7 @@ class Kho {
     }
 
     dsHangHoa.remove(hangHoa);
-    System.out.print("Đa xoa hang hoa co ma: " + maHang);
+    System.out.print("Da xoa hang hoa co ma: " + maHang);
     return true;
   }
 
@@ -84,7 +84,7 @@ class Kho {
     hangHoa.giaNhap = giaNhap;
     hangHoa.soLuong = soLuong;
     dsHangHoa.set(chiSo, hangHoa);
-    System.out.print("Đa sua thong tin hang hoa: ");
+    System.out.print("Da sua thong tin hang hoa: ");
     hangHoa.inThongTin();
     return hangHoa;
   }
@@ -153,7 +153,7 @@ class Kho {
       @Override
       public int compare(HangHoa hangHoa1, HangHoa hangHoa2) {
         int soSanhTheoLoai = hangHoa1.loai.compareTo(hangHoa2.loai);
-        // Neu khong cung loai --> sap theo loai la OK
+        // Neu khong cung loai --> sap theo loai la duoc
         if (soSanhTheoLoai != 0) {
           if (sapGiamDan) {
             return -soSanhTheoLoai;
